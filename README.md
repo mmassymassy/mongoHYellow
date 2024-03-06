@@ -31,14 +31,12 @@ In this case we need to use Websocket to get battery information in real time.
    2. We insert the session_id in the URL to connect to the websocket.
    3. We use the following URL to connect to the websocket:
       Create the websocket with the following URL:
-
-            wss://octave-ws.sierrawireless.io/session/${sessionId}/ws
-
-            webSocket = new WebSocket(`wss://octave-ws.sierrawireless.io/session/${sessionId}/ws`)
+      wss://octave-ws.sierrawireless.io/session/${sessionId}/ws
+      webSocket = new WebSocket('wss://octave-ws.sierrawireless.io/session/${sessionId}/ws')
     
-    4. Connect to the websocket and send a subscribe message to get the battery information.
+4. Connect to the websocket and send a subscribe message to get the battery information.
             
-            webSocket.send(JSON.stringify(subscribeMessage))
+   webSocket.send(JSON.stringify(subscribeMessage))
        
 ```
                const subscribeMessage = {
@@ -48,10 +46,11 @@ In this case we need to use Websocket to get battery information in real time.
                     streamId: 's65e73d5ade69b41fe8d59a13',
              };
 ```
-    5. Now we listen for incoming messages from the websocket which will contain the battery information.
+    
+5. Now we listen for incoming messages from the websocket which will contain the battery information.
 
 # Get environment real time information from sierra wireless :
-    We'll do the same thing to get the environment information, we just change the subscribe message to get the environment information.
+We'll do the same thing to get the environment information, we just change the subscribe message to get the environment information.
 
 ```
         const subscribeMessage = {
