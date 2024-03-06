@@ -1,4 +1,4 @@
-#Get Device information from sierra wireless :
+# Get Device information from sierra wireless :
 Make a GET request to the following URL:
 https://octave-api.sierrawireless.io/v5.0/massi/device
 ```
@@ -12,7 +12,7 @@ https://octave-api.sierrawireless.io/v5.0/massi/device
 T   
 ```
 
-#Get battery real time information from sierra wireless :
+# Get battery real time information from sierra wireless :
 In this case we need to use Websocket to get battery information in real time.
    1. First we need a session_id to connect to the websocket.
       Send a POST request to the following URL:
@@ -48,7 +48,7 @@ In this case we need to use Websocket to get battery information in real time.
          ```
     5. Now we listen for incoming messages from the websocket which will contain the battery information.
 
-#Get environment real time information from sierra wireless :
+# Get environment real time information from sierra wireless :
     We'll do the same thing to get the environment information, we just change the subscribe message to get the environment information.
     ```
         const subscribeMessage = {
