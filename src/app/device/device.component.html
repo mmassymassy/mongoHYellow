@@ -1,0 +1,46 @@
+
+
+<!-- displaying device infos  -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Device Info</h5>
+            <p class="card-text"><label >Device ID: </label> {{device.id}}</p>
+            <p class="card-text"><label >Device Name: </label>  {{device.name}}</p>
+            <p class="card-text"><label >Device Model: </label>  {{device.hardware.model}}</p>
+            <p class="card-text"><label >Device country code: </label>  {{device.hardware.countryCode}}</p>
+            <p class="card-text"><label >Device FSN: </label>  {{device.hardware.fsn}}</p>
+            <p class="card-text"><label >Device ICCID: </label>  {{device.hardware.iccid}}</p>
+            <p class="card-text"><label >Device IMEI: </label>  {{device.hardware.imei}}</p>
+            <p class="card-text"><label >Device Module: </label>  {{device.hardware.module}}</p>
+
+            <p class="card-text"><label >Device last seen data: </label>  {{ (device.lastSeen) | date }}</p>
+
+        </div>
+
+<style>
+    .card {
+        margin-top: 20px;
+    }
+
+    .card-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .card-text {
+        font-size: 15px;
+    }
+.card-text label{
+    display: inline-block;
+    font-weight: bold;
+}
+
+    .card-body {
+        padding: 10px;
+    }
+
+
+</style>

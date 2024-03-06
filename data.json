@@ -1,0 +1,30 @@
+message { target: WebSocket, isTrusted: true, data: '{
+        "type": "message",
+        "value": {
+            "id": "e65819e1cb11a9f3129d2ed4c",
+            "streamId": "s6581974c2fe424274e551ebf",
+            "creatorId": "i000000000000000000000001",
+            "lastEditorId": "i000000000000000000000001",
+            "metadata": {},
+            "creationDate": 1702993436703,
+            "lastEditDate": 1702993436703,
+            "generatedDate": 1702993435923,
+            "path": "/massi/devices/wp7702/battery",
+            "location": null,
+            "hash": null,
+            "tags": {},
+            "elems": {
+                "battery": {
+                    "degC": 0,
+                    "mA": 0,
+                    "mAh": 0,
+                    "V": 0,
+                    "charging": false,
+                    "health": "disconnected",
+                    "percent": 0
+                }
+            }
+        },
+        "resource": "s6581974c2fe424274e551ebf"
+    }', origin: "wss://octave-ws.sierrawireless.io", lastEventId: "", ports: Restricted, srcElement: WebSocket, currentTarget: WebSocket, eventPhase: 2, bubbles: false, …
+}

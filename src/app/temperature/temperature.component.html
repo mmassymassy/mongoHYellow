@@ -1,0 +1,21 @@
+<div class="content">
+    <h1 class="title">Environment information</h1>
+    <table>
+        <tr>
+            <th>Event ID</th>
+            <th>Stream ID</th>
+            <th>Path</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Received on</th>
+        </tr>
+        <tr *ngFor="let en of events">
+            <td>{{ en.type === 'message' ? en.value.id : '' }}</td>
+            <td>{{ en.type === 'message' ? en.value.streamId : '' }}</td>
+            <td>{{ en.type === 'message' ? en.value.path : '' }}</td>
+            <td>{{ en.type === 'message' ? en.value.elems.environment.temperature : '' }}</td>
+            <td>{{ en.type === 'message' ? en.value.elems.environment.humidity : '' }}</td>
+            <td>{{ (en.type === 'message' ? en.value.generatedDate : '') | date }}</td>
+        </tr>   
+    </table>
+</div>
