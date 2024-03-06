@@ -16,6 +16,7 @@ https://octave-api.sierrawireless.io/v5.0/massi/device
 In this case we need to use Websocket to get battery information in real time.
    1. First we need a session_id to connect to the websocket.
       Send a POST request to the following URL:
+      
       https://octave-ws.sierrawireless.io/session
 
 ```
@@ -31,10 +32,12 @@ In this case we need to use Websocket to get battery information in real time.
    2. We insert the session_id in the URL to connect to the websocket.
    3. We use the following URL to connect to the websocket:
       Create the websocket with the following URL:
+      
       wss://octave-ws.sierrawireless.io/session/${sessionId}/ws
+      
       webSocket = new WebSocket('wss://octave-ws.sierrawireless.io/session/${sessionId}/ws')
     
-4. Connect to the websocket and send a subscribe message to get the battery information.
+5. Connect to the websocket and send a subscribe message to get the battery information.
             
    webSocket.send(JSON.stringify(subscribeMessage))
        
